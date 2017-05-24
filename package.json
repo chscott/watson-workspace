@@ -1,0 +1,15 @@
+{
+  "name": "watson-workspace",
+  "version": "1.0.0",
+  "description": "Module for working with Watson Workspace spaces",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.ibm.com/chads/WatsonWorkspace.git"
+  },
+  "author": "Chad Scott <chads@us.ibm.com>",
+  "license": "ISC"
+}
