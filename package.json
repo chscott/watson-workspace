@@ -1,6 +1,6 @@
 {
   "name": "@ics/watson-workspace",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "description": "Module for working with Watson Workspace spaces",
   "main": "index.js",
   "scripts": {
@@ -18,6 +18,8 @@
     "request-promise": "^4.2.1"
   },
   "devDependencies": {
+    "chai": "^4.0.1",
+    "chai-http": "^3.0.0",
     "eslint": "^3.19.0"
   },
   "publishConfig": {
