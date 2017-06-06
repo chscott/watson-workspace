@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.39"></a>
+## [0.0.39](https://github.ibm.com/chads/WatsonWorkspace/compare/v0.0.38...v0.0.39) (2017-06-06)
+
+
+
 <a name="0.0.38"></a>
 ## [0.0.38](https://github.ibm.com/chads/WatsonWorkspace/compare/v0.0.37...v0.0.38) (2017-06-06)
 
