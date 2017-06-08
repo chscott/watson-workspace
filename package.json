@@ -1,6 +1,6 @@
 {
   "name": "@ics/watson-workspace",
-  "version": "0.0.48",
+  "version": "0.0.49",
   "description": "Module for working with Watson Workspace spaces",
   "main": "index.js",
   "scripts": {
