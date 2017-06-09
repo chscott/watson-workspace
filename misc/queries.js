@@ -7,7 +7,6 @@ const getMySpacesQuery = `
             }
         }
     }`;
-
 const getSpaceByIdQuery = `
     query getSpace {
         space(id: $ID) {
@@ -34,15 +33,27 @@ const getSpaceByIdQuery = `
         }
     }`;
 
-const getUserQuery = `
-    query getProfile {
-        person($ATTRIBUTE: $USER) {
-            id
-            displayName
-            email
-        }
-    }`;
+const getUserByIdQuery = { 
+    "query": `query getProfile($userId: ID!) {
+                person(id: $userId) {
+                    id
+                    displayName
+                    email
+                }
+            }`
+};
+
+const getUserByEmailQuery = { 
+    "query": `query getProfile($userEmail: String!) {
+                person(email: $userEmail) {
+                    id
+                    displayName
+                    email
+                }
+            }`
+};
 
 module.exports.getMySpacesQuery = getMySpacesQuery;
 module.exports.getSpaceByIdQuery = getSpaceByIdQuery;
-module.exports.getUserQuery = getUserQuery;
+module.exports.getUserByIdQuery = getUserByIdQuery;
+module.exports.getUserByEmailQuery = getUserByEmailQuery;
