@@ -94,7 +94,7 @@ Module for working with Watson Workspace spaces.
   ```
   
   ```PowerShell
-  Space: {"title":"Chad's Sandbox","description":null,"created":"2017-03-21T09:22:46.689+0000","updated":"2017-06-07T19:36:10.964+0000","id":"58d0f0e6e4b014d4036ee597","members":{"items":[{"email":"chads@us.ibm.com","displayName":"Chad Scott"},]},"membersUpdated":"2017-06-05T17:13:16.956+0000","createdBy":{"id":"48125740-8f0b-1028-92c4-db07163b51b2","email":"chads@us.ibm.com"},"updatedBy":{"id":"48125740-8f0b-1028-92c4-db07163b51b2","email":"chads@us.ibm.com"}}
+  Space: {"id":"58d0f0e6e4b014d4036ee597","title":"Chad's Sandbox","description":null,"created":"2017-03-21T09:22:46.689+0000","updated":"2017-06-09T18:08:31.102+0000","membersUpdated":"2017-06-05T17:13:16.956+0000","createdBy":{"id":"48125740-8f0b-1028-92c4-db07163b51b2","email":"chads@us.ibm.com"},"updatedBy":{"id":"48125740-8f0b-1028-92c4-db07163b51b2","email":"chads@us.ibm.com"},"members":{"items":[{"email":"chads@us.ibm.com","displayName":"Chad Scott"},{"email":null,"displayName":"WWModuleTester"}]}}
   ```
   
 - **spaces.getSpaceById**: Gets information about the specified Watson Workspace space.
@@ -122,7 +122,7 @@ Module for working with Watson Workspace spaces.
     ```
   
   ```PowerShell
-  Space: {"title":"Chad's Sandbox","description":null,"created":"2017-03-21T09:22:46.689+0000","updated":"2017-06-07T19:36:10.964+0000","id":"58d0f0e6e4b014d4036ee597","members":{"items":[{"email":"chads@us.ibm.com","displayName":"Chad Scott"},]},"membersUpdated":"2017-06-05T17:13:16.956+0000","createdBy":{"id":"48125740-8f0b-1028-92c4-db07163b51b2","email":"chads@us.ibm.com"},"updatedBy":{"id":"48125740-8f0b-1028-92c4-db07163b51b2","email":"chads@us.ibm.com"}}
+  Space: {"id":"58d0f0e6e4b014d4036ee597","title":"Chad's Sandbox","description":null,"created":"2017-03-21T09:22:46.689+0000","updated":"2017-06-09T18:08:31.102+0000","membersUpdated":"2017-06-05T17:13:16.956+0000","createdBy":{"id":"48125740-8f0b-1028-92c4-db07163b51b2","email":"chads@us.ibm.com"},"updatedBy":{"id":"48125740-8f0b-1028-92c4-db07163b51b2","email":"chads@us.ibm.com"},"members":{"items":[{"email":"chads@us.ibm.com","displayName":"Chad Scott"},{"email":null,"displayName":"WWModuleTester"}]}}
   ```
 
 ### Messages API
@@ -188,7 +188,7 @@ Module for working with Watson Workspace spaces.
   ```
   
   ```PowerShell
-  User: {"person":{"id":"48125740-8f0b-1028-92c4-db07163b51b2","displayName":"Chad Scott","email":"chads@us.ibm.com"}}
+  User: {"id":"48125740-8f0b-1028-92c4-db07163b51b2","displayName":"Chad Scott","email":"chads@us.ibm.com"}
   ```
   
 - **users.getUserByEmail**: Gets information about the specified user.
@@ -216,5 +216,5 @@ Module for working with Watson Workspace spaces.
   ```
   
   ```PowerShell
-  User: {"person":{"id":"48125740-8f0b-1028-92c4-db07163b51b2","displayName":"Chad Scott","email":"chads@us.ibm.com"}}
+  User: {"id":"48125740-8f0b-1028-92c4-db07163b51b2","displayName":"Chad Scott","email":"chads@us.ibm.com"}
   ```
