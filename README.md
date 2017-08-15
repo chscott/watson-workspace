@@ -109,17 +109,17 @@ Module for working with Watson Workspace spaces.
     const ww = require('@ics/watson-workspace');
     const appId = process.env.APP_ID;
     const appSecret = process.env.APP_SECRET;
-    const userId = '48125740-8f0b-1028-92c4-db07163b51b2';
+    const spaceId = '58d0f0e6e4b014d4036ee597';
 
     var token;
 
     Promise.resolve()
     .then( () => ww.auth.getToken(token, appId, appSecret) )
     .then( (returnToken) => token = returnToken )
-    .then( () => ww.users.getUserById(userId, token.access_token) )
-    .then( (user) => console.log('User: ' + JSON.stringify(user)) )
+    .then( () => ww.spaces.getSpaceById(spaceId, token.access_token) )
+    .then( (space) => console.log('Space: ' + JSON.stringify(space)) )
     .catch( (err) => console.error(err) );
-    ```
+  ```
   
   ```PowerShell
   Space: {"id":"58d0f0e6e4b014d4036ee597","title":"Chad's Sandbox","description":null,"created":"2017-03-21T09:22:46.689+0000","updated":"2017-06-09T18:08:31.102+0000","membersUpdated":"2017-06-05T17:13:16.956+0000","createdBy":{"id":"48125740-8f0b-1028-92c4-db07163b51b2","email":"chads@us.ibm.com"},"updatedBy":{"id":"48125740-8f0b-1028-92c4-db07163b51b2","email":"chads@us.ibm.com"},"members":{"items":[{"email":"chads@us.ibm.com","displayName":"Chad Scott"},{"email":null,"displayName":"WWModuleTester"}]}}
