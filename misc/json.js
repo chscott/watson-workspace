@@ -1,5 +1,4 @@
 const misc = require('../misc');
-const util = require('util');
 
 function assertJSONObject(obj) {
         
