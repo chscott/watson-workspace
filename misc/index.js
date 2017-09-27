@@ -3,3 +3,4 @@ module.exports.queries = require('./queries');
 module.exports.urls = require('./urls');
 module.exports.error = require('./error');
 module.exports.json = require('./json');
+module.exports.http = require('./http');
