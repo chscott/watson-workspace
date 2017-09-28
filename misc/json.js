@@ -4,12 +4,15 @@ const util = require('util');
 // Local modules
 const misc = require('../misc');
 
+/*
+    Throws an error if the object is not JSON. Otherwise, no-op.
+*/
 function assertJSONObject(obj) {
         
     const whoami = 'watson-workspace.misc.json.assertJSONObject(): ';
     var jsonError;
     
-    misc.debug(whoami + 'Object:\n' + util.inspect(obj, { depth: null }));
+    misc.trace.logTrace(whoami + 'Object:\n' + util.inspect(obj, { depth: null }), misc.trace.TRACE_LEVEL_HIGH);
     
     // If obj is not an object, it can't be a JSON object
     if (typeof(obj) !== 'object') {

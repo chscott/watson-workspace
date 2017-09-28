@@ -6,14 +6,14 @@ function statusCodeOK(res) {
     const whoami = 'watson-workspace.misc.http.statusCodeOK(): ';
         
     if (res.hasOwnProperty('statusCode') && res.statusCode === 200) {
-        misc.debug(whoami + 'Received HTTP status code OK');
+        misc.trace.logTrace(whoami + 'Received HTTP status code OK', misc.trace.TRACE_LEVEL_MEDIUM);
         return true;
     } else if (res.hasOwnProperty('statusCode')) {
-        misc.debug(whoami + 'Received non-OK HTTP status code ' + res.statusCode);
+        misc.trace.logTrace(whoami + 'Received non-OK HTTP status code ' + res.statusCode, misc.trace.TRACE_LEVEL_MEDIUM);
         return false;
     } else {
-        misc.debug(whoami + 'Response contains no status code');
-        misc.debug(whoami + util.inspect(res, { depth: null }));
+        misc.trace.logTrace(whoami + 'Response contains no status code', misc.trace.TRACE_LEVEL_MEDIUM);
+        misc.trace.logTrace(whoami + util.inspect(res, { depth: null }), misc.trace.TRACE_LEVEL_HIGH);
         return false;
     }
     
