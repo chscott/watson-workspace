@@ -13,7 +13,6 @@
   "author": "Chad Scott <chads@us.ibm.com>",
   "license": "ISC",
   "dependencies": {
-    "crypto": "0.0.3",
     "request": "^2.81.0",
     "request-promise": "^4.2.1"
   },
