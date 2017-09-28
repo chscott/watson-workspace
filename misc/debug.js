@@ -1,6 +1,6 @@
 const debug = process.env.DEBUG || 'false';
 
-function logDebug(msg) {
+function logDebug(msg, level) {
     
     if (debug.toLowerCase() === 'true') {
         console.log(msg);
