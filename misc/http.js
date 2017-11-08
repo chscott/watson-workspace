@@ -14,4 +14,4 @@ function assertStatusCodeOK(res) {
     
 }
 
-module.exports.statusCodeOK = statusCodeOK;
+module.exports.assertStatusCodeOK = assertStatusCodeOK;
