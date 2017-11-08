@@ -8,8 +8,8 @@ function assertStatusCodeOK(res) {
     
     if (!res.statusCode) {
         throw new misc.error('NoStatusCodeError', 'Response contains no status code property');
-    } else if (res.statusCode !== 200) {
-        throw new misc.error('NonOKStatusCodeError', 'Status code is not 200');
+    } else if (res.statusCode !== 200 && res.statusCode !== 201) {
+        throw new misc.error('NonOKStatusCodeError', 'Status code is ' + res.statusCode);
     }
     
 }
