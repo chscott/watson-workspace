@@ -60,7 +60,7 @@ query getProfile($userEmail: String!) {
 }`
 };
 
-module.exports.getMySpacesQuery = () => new String(getMySpacesQuery);
-module.exports.getSpaceByIdQuery = () => new String(getSpaceByIdQuery);
-module.exports.getUserByIdQuery = () => new String(getUserByIdQuery);
-module.exports.getUserByEmailQuery = () => new String(getUserByEmailQuery);
+module.exports.getMySpacesQuery = () => new String(mySpacesQuery);
+module.exports.getSpaceByIdQuery = () => new String(spaceByIdQuery);
+module.exports.getUserByIdQuery = () => new String(userByIdQuery);
+module.exports.getUserByEmailQuery = () => new String(userByEmailQuery);
