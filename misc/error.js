@@ -1,6 +1,6 @@
 function WWError(name, message) {
     
-    var error = new Error(message);
+    let error = new Error(message);
     error.name = name;
     return error;
     
