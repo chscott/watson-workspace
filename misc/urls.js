@@ -1,3 +1,5 @@
+'use strict';
+
 const WW_BASE_URL = 'https://api.watsonwork.ibm.com';
 const WW_GRAPHQL_URL = WW_BASE_URL + '/graphql';
 const WW_OAUTH_URL = WW_BASE_URL + '/oauth/token';

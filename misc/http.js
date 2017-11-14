@@ -1,17 +1,18 @@
-// Local modules
+'use strict';
+
 const misc = require('../misc');
 
 /*
-    Throws an error if the status code is not HTTP 200. Otherwise, no-op.
+    Returns true if statusCode is 200 or 201 and false otherwise
 */
-function assertStatusCodeOK(res) {
-    
-    if (!res.statusCode) {
-        throw new misc.error('NoStatusCodeError', 'Response contains no status code property');
-    } else if (res.statusCode !== 200 && res.statusCode !== 201) {
-        throw new misc.error('NonOKStatusCodeError', 'Status code is ' + res.statusCode);
+function isStatusCodeOK(statusCode) {
+
+    if (statusCode && (statusCode === 200 || statusCode === 201)) {
+        return true;
+    } else {
+        return false;
     }
-    
+
 }
 
-module.exports.assertStatusCodeOK = assertStatusCodeOK;
+module.exports.isStatusCodeOK = isStatusCodeOK;

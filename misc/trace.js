@@ -1,3 +1,5 @@
+'use strict';
+
 const TRACE_LEVEL = parseInt(process.env.TRACE) || 0;
 
 // Trace components
@@ -9,13 +11,13 @@ const TRACE_USERS = parseInt(process.env.TRACE_USERS) || 0;
 const TRACE_HTTP = parseInt(process.env.TRACE_HTTP) || 0;
 
 function logTrace(msg, component) {
-       
+
     if (TRACE_ALL > 0) {
         console.log(msg);
     } else if (component > 0) {
         console.log(msg);
     }
-    
+
 }
 
 module.exports.logTrace = logTrace;

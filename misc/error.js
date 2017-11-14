@@ -1,3 +1,5 @@
+'use strict';
+
 function WWError(name, message) {
     
     let error = new Error(message);

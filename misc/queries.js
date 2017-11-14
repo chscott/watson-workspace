@@ -1,3 +1,5 @@
+'use strict';
+
 const mySpacesQuery = {
     "query": `
 query getSpaces {
@@ -38,7 +40,7 @@ query getSpace($spaceId: ID!) {
 }`
 };
 
-const userByIdQuery = { 
+const userByIdQuery = {
     "query": `
 query getProfile($userId: ID!) {
     person(id: $userId) {
@@ -49,7 +51,7 @@ query getProfile($userId: ID!) {
 }`
 };
 
-const userByEmailQuery = { 
+const userByEmailQuery = {
     "query": `
 query getProfile($userEmail: String!) {
     person(email: $userEmail) {
