@@ -1,22 +1,18 @@
-const misc = require('../misc');
-const util = require('util');
+'use strict';
 
-function statusCodeOK(res) {
-    
-    const whoami = 'watson-workspace.misc.http.statusCodeOK(): ';
-        
-    if (res.hasOwnProperty('statusCode') && res.statusCode === 200) {
-        misc.trace.logTrace(whoami + 'Received HTTP status code OK', misc.trace.TRACE_LEVEL_MEDIUM);
+const misc = require('../misc');
+
+/*
+    Returns true if statusCode is 200 or 201 and false otherwise
+*/
+function isStatusCodeOK(statusCode) {
+
+    if (statusCode && (statusCode === 200 || statusCode === 201)) {
         return true;
-    } else if (res.hasOwnProperty('statusCode')) {
-        misc.trace.logTrace(whoami + 'Received non-OK HTTP status code ' + res.statusCode, misc.trace.TRACE_LEVEL_MEDIUM);
-        return false;
     } else {
-        misc.trace.logTrace(whoami + 'Response contains no status code', misc.trace.TRACE_LEVEL_MEDIUM);
-        misc.trace.logTrace(whoami + util.inspect(res, { depth: null }), misc.trace.TRACE_LEVEL_HIGH);
         return false;
     }
-    
+
 }
 
-module.exports.statusCodeOK = statusCodeOK;
+module.exports.isStatusCodeOK = isStatusCodeOK;

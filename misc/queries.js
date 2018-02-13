@@ -1,4 +1,6 @@
-const getMySpacesQuery = {
+'use strict';
+
+const mySpacesQuery = {
     "query": `
 query getSpaces {
     spaces(first:200) {
@@ -10,7 +12,7 @@ query getSpaces {
 }`
 };
 
-const getSpaceByIdQuery = {
+const spaceByIdQuery = {
     "query": `
 query getSpace($spaceId: ID!) {
     space(id: $spaceId) {
@@ -38,7 +40,7 @@ query getSpace($spaceId: ID!) {
 }`
 };
 
-const getUserByIdQuery = { 
+const userByIdQuery = {
     "query": `
 query getProfile($userId: ID!) {
     person(id: $userId) {
@@ -49,7 +51,7 @@ query getProfile($userId: ID!) {
 }`
 };
 
-const getUserByEmailQuery = { 
+const userByEmailQuery = {
     "query": `
 query getProfile($userEmail: String!) {
     person(email: $userEmail) {
@@ -60,7 +62,7 @@ query getProfile($userEmail: String!) {
 }`
 };
 
-module.exports.getMySpacesQuery = getMySpacesQuery;
-module.exports.getSpaceByIdQuery = getSpaceByIdQuery;
-module.exports.getUserByIdQuery = getUserByIdQuery;
-module.exports.getUserByEmailQuery = getUserByEmailQuery;
+module.exports.getMySpacesQuery = () => Object.assign({}, mySpacesQuery);
+module.exports.getSpaceByIdQuery = () => Object.assign({}, spaceByIdQuery);
+module.exports.getUserByIdQuery = () => Object.assign({}, userByIdQuery);
+module.exports.getUserByEmailQuery = () => Object.assign({}, userByEmailQuery);

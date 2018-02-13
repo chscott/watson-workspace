@@ -1,36 +1,28 @@
-// Public modules
-const util = require('util');
+'use strict';
 
-// Local modules
 const misc = require('../misc');
 
 /*
-    Throws an error if the object is not JSON. Otherwise, no-op.
+    Returns true if obj is valid JSON and false if not
 */
-function assertJSONObject(obj) {
-        
-    const whoami = 'watson-workspace.misc.json.assertJSONObject(): ';
-    var jsonError;
-    
-    misc.trace.logTrace(whoami + 'Object:\n' + util.inspect(obj, { depth: null }), misc.trace.TRACE_LEVEL_HIGH);
-    
+function isJSONObject(obj) {
+
+    let isValidJSON = true;
+
     // If obj is not an object, it can't be a JSON object
-    if (typeof(obj) !== 'object') {
-        jsonError = new Error("Object is not valid JSON. The typeof is not 'object'");
-        jsonError.name = 'InvalidJSONError';
-        throw jsonError;
+    if (typeof obj !== 'object') {
+        isValidJSON = false;
     }
-    
+
     // If we can convert to string and parse back into a JSON, it's JSON
     try {
         JSON.parse(JSON.stringify(obj));
+    } catch (err) {
+        isValidJSON = false;
     }
-    catch (error) {
-        jsonError = new Error('Object is not valid JSON. Unable to convert to string and parse into JSON');
-        jsonError.name = 'InvalidJSONError';
-        throw jsonError;
-    }
-    
+
+    return isValidJSON;
+
 }
 
-module.exports.assertJSONObject = assertJSONObject;
+module.exports.isJSONObject = isJSONObject;

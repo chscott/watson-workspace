@@ -1,33 +1,28 @@
+'use strict';
+
 const TRACE_LEVEL = parseInt(process.env.TRACE) || 0;
 
-// Trace levels. The higher the number, the more verbose the level
-const TRACE_LEVEL_OFF = 0;
-const TRACE_LEVEL_LOW = 1;
-const TRACE_LEVEL_MEDIUM = 2;
-const TRACE_LEVEL_HIGH = 3;
+// Trace components
+const TRACE_ALL = parseInt(process.env.TRACE_ALL) || 0;
+const TRACE_AUTH = parseInt(process.env.TRACE_AUTH) || 0;
+const TRACE_MESSAGES = parseInt(process.env.TRACE_MESSAGES) || 0;
+const TRACE_SPACES = parseInt(process.env.TRACE_SPACES) || 0;
+const TRACE_USERS = parseInt(process.env.TRACE_USERS) || 0;
+const TRACE_HTTP = parseInt(process.env.TRACE_HTTP) || 0;
 
-function logTrace(msg, level) {
-        
-    // Tracing is disabled, so don't print
-    if (TRACE_LEVEL === TRACE_LEVEL_OFF) {
-        return;
-    }
-    
-    // level was not specified, so treat it as level high
-    if (!level) {
-        console.log('Warning: logTrace() called without a specified level');
-        level = TRACE_LEVEL_HIGH;
-    }
-    
-    // Print all trace statements at specified level or lower
-    if (TRACE_LEVEL >= level) {
+function logTrace(msg, component) {
+
+    if (TRACE_ALL > 0) {
+        console.log(msg);
+    } else if (component > 0) {
         console.log(msg);
     }
-    
+
 }
 
 module.exports.logTrace = logTrace;
-module.exports.TRACE_LEVEL_OFF = TRACE_LEVEL_OFF;
-module.exports.TRACE_LEVEL_LOW = TRACE_LEVEL_LOW;
-module.exports.TRACE_LEVEL_MEDIUM = TRACE_LEVEL_MEDIUM;
-module.exports.TRACE_LEVEL_HIGH = TRACE_LEVEL_HIGH;
+module.exports.TRACE_AUTH = TRACE_AUTH;
+module.exports.TRACE_MESSAGES = TRACE_MESSAGES;
+module.exports.TRACE_SPACES = TRACE_SPACES;
+module.exports.TRACE_USERS = TRACE_USERS;
+module.exports.TRACE_HTTP = TRACE_HTTP;

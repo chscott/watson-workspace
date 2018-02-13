@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports.debug = require('./debug');
 module.exports.trace = require('./trace');
 module.exports.queries = require('./queries');
