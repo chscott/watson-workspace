@@ -3,22 +3,14 @@
 Module for working with Watson Workspace spaces.
 
 ### Quick start
-
-1. Log into IBM's NPM registry using the following command:
-
-   ```PowerShell
-   npm login --registry=https://npm-registry.whitewater.ibm.com --scope=@ics
-   ```
-
-   Be sure to follow the URL link in the shell to complete login.
    
-2. Require the @ics/watson-workspace module:
+1. Require the watson-workspace module:
 
     ```JavaScript
-    const ww = require('@ics/watson-workspace');
+    const ww = require('watson-workspace');
     ```
     
-3. Invoke the API functions. See the Examples section for details.
+2. Invoke the API functions. See the Examples section for details.
 
 ### Authentication API
 
